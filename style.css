@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;	
+}
+
+body {
+	font-family: 'Press Start 2P', sans-serif;
+	color: #eee;
+	background-color: #222;
+}
+
+header {
+	position: relative;
+	height: 35vh;
+	border-bottom: 7px solid #eee;
+}
+
+main {
+	height: 65vh;
+	color: #eee;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.left {
+	width: 52rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.right {
+	width: 52rem;
+	font-size: 2rem;
+}
+
+h1 {
+	font-size: 4rem;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top: 52%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.number {
+	background: #eee;
+	color: #333;
+	font-size: 6rem;
+	width: 15rem;
+	padding: 3rem 0rem;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+
+.between {
+	font-size: 1.4rem;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+}
+
+.again {
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+}
+
+.guess {
+	background: none;
+	border: 4px solid #eee;
+	outline: none;
+	font-family: inherit;
+	color: inherit;
+	font-size: 5rem;
+	padding: 2.5rem;
+	width: 25rem;
+	text-align: center;
+	display: block;
+	margin-bottom: 3rem;
+	appearance: none;
+}
+
+.btn {
+	border: none;
+	outline: none;
+	background-color: #eee;
+	color: #222;
+	font-size: 2rem;
+	font-family: inherit;
+	padding: 2rem 3rem;
+	cursor: pointer;
+	transition: all 0.3s linear;
+}
+
+.btn:hover {
+  	background-color: #ccc;
+}
+
+.message {
+	margin-bottom: 8rem;
+	height: 3rem;
+}
+
+.label-score {
+  	margin-bottom: 2rem;
+}
+
+footer {
+	position: absolute;
+	bottom: 4%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+footer a {
+	text-decoration: none;
+	color: #eee;
+	font-size: 1.5rem;
+}
+
+footer i {
+	font-size: 2rem;
+}
+
+/* Modal */
+
+#btn {
+    display: block;
+    margin: 100px auto;
+    border: none;
+    outline: none;
+    background-color: orangered;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+}
+
+#btn:hover {
+    background-color: orange;
+}
+
+.modal {
+    background-color: #fff;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    text-align: justify;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: -50%;
+    transition: all 0.5s cubic-bezier(0.14, 0.97, 0.48, 0.99);
+    transform: translate(-50%, -50%);
+    padding: 15px;
+}
+
+.modal-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#btn-close {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.8rem 1.5rem;
+	border-radius: 0.4rem;
+	font-size: 1rem;
+	outline: none;
+	border: none;
+    background-color: rgba(16, 16, 202, 0.8);
+	font-family: 'Press Start 2P', sans-serif;
+}
+
+.lose {
+	color: #222;
+	font-size: 2rem;
+	word-spacing: 1px !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    backdrop-filter: blur(1.5px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+	header {
+		border-bottom-width: 5px;
+	}
+
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	.number {
+		font-size: 4rem;
+		width: 10rem;
+		padding: 2rem 0rem;
+	}
+
+	.between {
+		right: 1rem;
+	}
+
+	.again {
+		left: 1rem;
+	}
+
+	.btn {
+		padding: 1.2rem 2rem;
+	}
+
+	.guess {
+		font-size: 3rem;
+		padding: 2rem;
+		width: 20rem;
+		border: 3px solid #eee;
+	}
+
+	.right {
+		font-size: 1.6rem;
+		padding-right: 1rem;
+		width: auto;
+	}
+
+	.left {
+		width: auto;
+	}
+
+	.message {
+		margin-bottom: 4rem;
+		height: 3rem;
+	}
+}
+
+@media (max-width: 575px) {
+	h1 {
+		font-size: 1.8rem;
+		padding: 0 1rem;
+	}
+
+	.number {
+		font-size: 2rem;
+		width: 6rem;
+		padding: 2rem 0rem;
+	}
+
+	.btn {
+		padding: 1rem 1.5rem;
+		font-size: 1.2rem;
+	}
+
+	.between {
+		font-size: 1rem;
+		line-height: 3;
+	}
+
+	.guess {
+		font-size: 2rem;
+		padding: 1.5rem;
+		width: 12rem;
+		margin-bottom: 0;
+		margin-right: 3rem;
+	} 
+
+	main {
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+
+	.left {
+		order: 1;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.right {
+		padding: 0 1rem;
+	}
+
+	footer a {
+		font-size: 1rem;
+	}
+	
+	footer i {
+		font-size: 1.5rem;
+	}
+
+	.modal {
+		max-width: 80%;
+	}
+
+	.lose {
+		font-size: 1.2rem;
+	}
+
+	#btn-close {
+		display: none;
+	}
+}
